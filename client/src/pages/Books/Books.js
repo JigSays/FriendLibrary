@@ -12,7 +12,10 @@ class Books extends Component {
     books: [],
     title: "",
     author: "",
-    synopsis: ""
+    rating: "",
+    genre: "",
+    status: "",
+    user: ""
   };
 
   componentDidMount() {
@@ -22,7 +25,7 @@ class Books extends Component {
   loadBooks = () => {
     API.getBooks()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ books: res.data, title: "", author: "", rating: "", genre: "", status: "", user: ""  })
       )
       .catch(err => console.log(err));
   };
@@ -46,7 +49,11 @@ class Books extends Component {
       API.saveBook({
         title: this.state.title,
         author: this.state.author,
-        synopsis: this.state.synopsis
+        genre: this.state.genre,
+        rating: this.state.rating,
+        status: this.state.status,
+        user: this.state.user
+
       })
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
@@ -74,11 +81,23 @@ class Books extends Component {
                 name="author"
                 placeholder="Author (required)"
               />
-              <TextArea
-                value={this.state.synopsis}
+              <Input
+                value={this.state.genre}
                 onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="genre"
+                placeholder="Genre"
+              />
+              <Input
+                value={this.state.rating}
+                onChange={this.handleInputChange}
+                name="rating"
+                placeholder="Rating"
+              />
+              <Input
+                value={this.state.status}
+                onChange={this.handleInputChange}
+                name="status"
+                placeholder="Available"
               />
               <FormBtn
                 disabled={!(this.state.author && this.state.title)}

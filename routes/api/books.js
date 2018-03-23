@@ -15,19 +15,19 @@ router
 
   router
   .route("/:author")
-  .get(booksController.author)
+  .get(booksController.findByAuthor)
   .put(booksController.update)
   .delete(booksController.remove);
 
   router
   .route("/:title")
-  .get(booksController.title)
+  .get(booksController.findByTitle)
   .put(booksController.update)
   .delete(booksController.remove);
 
   router
   .route("/:genre")
-  .get(booksController.genre)
+  .get(booksController.findByGenre)
   .put(booksController.update)
   .delete(booksController.remove);
 
