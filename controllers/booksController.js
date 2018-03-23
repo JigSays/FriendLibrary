@@ -5,6 +5,13 @@ module.exports = {
   findAll: function(req, res) {
     db.Book
       .find(req.query)
+      .sort({ title: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findNew: function(req, res) {
+    db.Book
+      .find(req.query)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
@@ -12,6 +19,24 @@ module.exports = {
   findById: function(req, res) {
     db.Book
       .findById(req.params.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByAuthor: function(req, res) {
+    db.Book
+      .findById(req.params.author)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByTitle: function(req, res) {
+    db.Book
+      .findById(req.params.title)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findByGenre: function(req, res) {
+    db.Book
+      .findById(req.params.genre)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
