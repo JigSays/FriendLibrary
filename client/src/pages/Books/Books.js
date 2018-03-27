@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import { Input, TextArea, FormBtn } from "../../components/Form";
 import BookCard from "../../components/BookCard";
 import NewBook from "../../components/NewBook";
-import reactstrap from 'reactstrap';
+import Search from "../../components/Search";
 
 class Books extends Component {
   state = {
@@ -16,7 +14,9 @@ class Books extends Component {
     rating: "",
     genre: "",
     status: "",
-    user: ""
+    user: "",
+    showModal: false,
+    showModal2: false
   };
 
   componentDidMount() {
@@ -66,9 +66,10 @@ class Books extends Component {
     return (
       <Container fluid>
         <Row>
-          {/* <button onClick={() => <NewBook/>}>Add New Book</button> */}
           <button onClick={() => this.setState({showModal: !this.state.showModal})}>Add New Book</button>
           {this.state.showModal && <NewBook/>}
+          <button onClick={() => this.setState({showModal2: !this.state.showModal2})}>Search</button>
+          {this.state.showModal2 && <Search/>}
         </Row>
           <Row>
           <Col size="md-12 sm-12">
