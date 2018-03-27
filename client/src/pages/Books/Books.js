@@ -6,6 +6,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import BookCard from "../../components/BookCard";
 import NewBook from "../../components/NewBook";
+import reactstrap from 'reactstrap';
 
 class Books extends Component {
   state = {
@@ -66,13 +67,13 @@ class Books extends Component {
       <Container fluid>
         <Row>
           {/* <button onClick={() => <NewBook/>}>Add New Book</button> */}
-          <button onClick={() => this.setState({showModal: !this.state.showModal})}>Add Work Log</button>
+          <button onClick={() => this.setState({showModal: !this.state.showModal})}>Add New Book</button>
           {this.state.showModal && <NewBook/>}
         </Row>
           <Row>
           <Col size="md-12 sm-12">
             <Jumbotron>
-              <h1>Lending Library:</h1>
+              <h2>Lending Library:</h2>
             </Jumbotron>
               {this.state.books.length ? (
               <div>
