@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Container } from "../../components/Grid";
+import { Input, FormBtn } from "../../components/Form";
 import Jumbotron from "../../components/Jumbotron";
 
 class NewBook extends Component {
@@ -15,6 +14,15 @@ class NewBook extends Component {
       status: "",
       user: ""
     };
+
+    loadBooks = () => {
+        API.getBooks()
+          .then(res =>
+            this.setState({ books: res.data, title: "", author: "", rating: "", genre: "", status: "", user: ""  })
+            
+          )
+          .catch(err => console.log(err));
+      };
 
 handleInputChange = event => {
     const { name, value } = event.target;
@@ -73,7 +81,7 @@ handleInputChange = event => {
                                 <option value="Mystery">Mystery</option>
                                 <option value="Biography">Biography</option>
                             </select>
-                            </div>
+                            </div><br/>
                             <div>
                                 <span>Rating: </span>
                             <select
@@ -83,13 +91,13 @@ handleInputChange = event => {
                                 placeholder="Rating"
                             >
                                 <option value=""></option>
-                                <option value="1" class="fa-star">&#xf005;</option>
-                                <option value="2" class="fa-star">&#xf005;&#xf005;</option>
-                                <option value="3" class="fa-star">&#xf005;&#xf005;&#xf005;</option>
-                                <option value="4" class="fa-star">&#xf005;&#xf005;&#xf005;&#xf005;</option>
-                                <option value="5" class="fa-star">&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;</option>
+                                <option value="1">1/5</option>
+                                <option value="2">2/5</option>
+                                <option value="3">3/5</option>
+                                <option value="4">4/5</option>
+                                <option value="5">5/5</option>
                             </select>
-                            </div>
+                            </div><br/>
                             <div>
                                 <span>Availability: </span>
                             <select
