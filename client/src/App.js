@@ -12,9 +12,9 @@ const App = () =>
         <Route exact path="/" component={Books} />
         <Route exact path="/books" component={Books} />
         <Route exact path="/books/:id" component={Books} />
-        <Route exact path="/books/:author" component={Books} />
-        <Route exact path="/books/:title" component={Books} />
-        <Route exact path="/books/:genre" component={Books} />
+        <Route exact path="/books/author" component={Books} />
+        <Route exact path="/books/title" component={Books} />
+        <Route exact path="/books/genre" component={Books} />
         <Route exact path="/books/new" component={Books} />
         <Route component={NoMatch} />
       </Switch>

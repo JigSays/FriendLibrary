@@ -16,7 +16,8 @@ class Books extends Component {
     status: "",
     user: "",
     showModal: false,
-    showModal2: false
+    showModal2: false,
+    id: ""
   };
 
   componentDidMount() {
@@ -41,7 +42,15 @@ class Books extends Component {
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value
+      [name]: value,
+      books: [],
+      title: "",
+      author: "",
+      rating: "",
+      genre: "",
+      status: "",
+      user: "",
+      id: ""
     });
   };
 
@@ -62,6 +71,32 @@ class Books extends Component {
     }
   };
 
+  handleSearchChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+
+  searchSubmit = event => {
+    event.preventDefault();
+    if (this.state.title) {
+      API.getTitle(this.state.title)
+        .then(res => this.setState({books: res.data}))
+        .catch(err => console.log(err));
+      }else if(this.state.author){
+        API.getAuthor(this.state.author)
+        .then(res => this.setState({books: res.data}))
+        .catch(err => console.log(err));
+      }else if(this.state.genre){
+        API.getGenre(this.state.genre)
+        .then(res => this.setState({books: res.data}))
+        .catch(err => console.log(err));
+    }
+  };
+  
+
   render() {
     return (
       <Container fluid>
@@ -69,7 +104,7 @@ class Books extends Component {
           <button onClick={() => this.setState({showModal: !this.state.showModal})}>Add New Book</button>
           {this.state.showModal && <NewBook/>}
           <button onClick={() => this.setState({showModal2: !this.state.showModal2})}>Search</button>
-          {this.state.showModal2 && <Search/>}
+          {this.state.showModal2 && <Search clickHandler={this.searchSubmit} changeHandler={this.handleSearchChange} genre={this.state.genre} title={this.state.title} author={this.state.author}/>}
         </Row>
           <Row>
           <Col size="md-12 sm-12">
@@ -77,7 +112,7 @@ class Books extends Component {
               <h2>Lending Library:</h2>
             </Jumbotron>
               {this.state.books.length ? (
-              <div>
+              <div key={this.state.books.id}>
                 {this.state.books.map(elem => <BookCard current={elem} />)} 
               </div>
               ) : (

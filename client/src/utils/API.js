@@ -6,6 +6,15 @@ export default {
     return axios.get("/api/books");
   },
   // Gets the book with the given id
+  getTitle: function(id) {
+    return axios.get("/api/books/title/" + id);
+  },
+  getAuthor: function(id) {
+    return axios.get("/api/books/author/" + id);
+  },
+  getGenre: function(id) {
+    return axios.get("/api/books/genre/" + id);
+  },
   getBook: function(id) {
     return axios.get("/api/books/" + id);
   },

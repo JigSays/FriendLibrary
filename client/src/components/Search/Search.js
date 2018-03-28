@@ -1,76 +1,32 @@
-import React, { Component } from "react";
-import API from "../../utils/API";
+import React from "react";
 import { Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import Jumbotron from "../../components/Jumbotron";
 
-class Search extends Component {
-    state = {
-      books: [],
-      title: "",
-      author: "",
-      rating: "",
-      genre: "",
-      status: "",
-      user: ""
-    };
+const Search = props =>  {
 
-loadBooks = () => {
-    API.getBooks()
-        .then(res =>
-        this.setState({ books: res.data, title: "", author: "", rating: "", genre: "", status: "", user: ""  })
-        
-        )
-        .catch(err => console.log(err));
-    };
-
-handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title) {
-      API.getBooks({
-        title: this.state.title
-      })}else if(this.state.author){
-        API.getBooks({
-            author: this.state.author
-      })}else if(this.state.genre){
-        API.getBooks({
-            genre: this.state.genre
-      })
-        .then(res => this.loadBooks())
-        .catch(err => console.log(err));
-    }
-  };
-
-  render() {
     return (
         <div className="modal-body">
                      <Container fluid>
                          <Jumbotron><h1>Search for a Book in the Library</h1></Jumbotron>
                          <form>
                              <Input
-                                 value={this.state.title}
-                                 onChange={this.handleInputChange}
+                                 value={props.title}
+                                 onChange={props.changeHandler}
                                  name="title"
                                  placeholder="Title"
                              />
                                 <Input
-                                value={this.state.author}
-                                onChange={this.handleInputChange}
+                                value={props.author}
+                                onChange={props.changeHandler}
                                 name="author"
                                 placeholder="Author"
                             />
                             <div>
                                 <span>Genre </span>
                             <select
-                                value={this.state.genre}
-                                onChange={this.handleInputChange}
+                                value={props.genre}
+                                onChange={props.changeHandler}
                                 name="genre"
                                 placeholder="Genre"
                             >
@@ -84,15 +40,15 @@ handleInputChange = event => {
                             </div><br/>
                             <div className="modal-footer">
                             <FormBtn
-                                 disabled={!(this.state.author || this.state.title || this.state.genre)}
-                                 onClick={this.handleFormSubmit}
+                                //  disabled={!(this.state.author || this.state.title || this.state.genre)}
+                                 onClick={props.clickHandler}
                             >Search</FormBtn>
                             </div>
         </form>
         </Container>
         </div>
     );
-}
+
 }
 
 
