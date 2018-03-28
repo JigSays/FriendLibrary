@@ -3,11 +3,11 @@ import "./BookCard.css";
 import DeleteBtn from "../DeleteBtn";
 
 const BookCard = props => (
-  <div className="card">
+  <div className="card" value={props.current._id}>
     <div className="content">
       <ul>
         <li>
-          <strong>Title:</strong> {props.current.title}
+          <h2>{props.current.title}</h2>
         </li>
         <li>
           <strong>Author:</strong> {props.current.author}
@@ -23,9 +23,6 @@ const BookCard = props => (
         </li>
         <li>
           <strong>Friend:</strong> {props.current.user}
-        </li>
-        <li>
-          <p>ID: {props.current._id}</p>
         </li>
       </ul>
     </div>

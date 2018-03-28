@@ -24,21 +24,22 @@ module.exports = {
   },
   findByAuthor: function(req, res) {
     db.Book
-      .findById(req.params.author)
+      .find({author: req.params.id})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByTitle: function(req, res) {
     db.Book
-      .findById(req.params.title)
+      .find({title: req.params.id})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByGenre: function(req, res) {
+    console.log({genre: req.params.id});
     db.Book
-      .findById(req.params.genre)
+      .find({genre: req.params.id})
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch(err => console.log(err));
   },
   create: function(req, res) {
     db.Book
