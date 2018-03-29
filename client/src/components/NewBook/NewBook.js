@@ -126,7 +126,13 @@ handleInputChange = event => {
                                 <option value="Available">Available</option>
                                 <option value="Not Available">Not Available</option>
                             </select>
-                            </div>
+                            </div><br/>
+                            <Input
+                                 value={this.state.user}
+                                 onChange={this.handleInputChange}
+                                 name="user"
+                                 placeholder="Your Name (required)"
+                             />
                             <div class="modal-footer">
                             <FormBtn
                                  disabled={!(this.state.author && this.state.title)}
