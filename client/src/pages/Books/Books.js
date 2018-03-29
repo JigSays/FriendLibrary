@@ -5,6 +5,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import BookCard from "../../components/BookCard";
 import NewBook from "../../components/NewBook";
 import Search from "../../components/Search";
+import "./Books.css";
 
 class Books extends Component {
   state = {

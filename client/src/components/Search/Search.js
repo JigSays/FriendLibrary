@@ -8,7 +8,7 @@ const Search = props =>  {
     return (
         <div className="modal-body">
                      <Container fluid>
-                         <Jumbotron><h1>Search for a Book in the Library</h1></Jumbotron>
+                         <Jumbotron><h2>Search for a Book in the Library</h2></Jumbotron>
                          <form>
                              <Input
                                  value={props.title}
