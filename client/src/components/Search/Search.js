@@ -31,11 +31,27 @@ const Search = props =>  {
                                 placeholder="Genre"
                             >
                                 <option value=""></option>
-                                <option value="Romance">Romance</option>
-                                <option value="Historical Non-Fiction">Historical Non-Fiction</option>
-                                <option value="Fantasy">Fantasy</option>
-                                <option value="Mystery">Mystery</option>
                                 <option value="Biography">Biography</option>
+                                <option value="Business">Business</option>
+                                <option value="Childrens">Children's</option>
+                                <option value="Cookbooks">Cookbooks</option>
+                                <option value="Crime">Crime</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="Historical Ficton">Historical Fiction</option>
+                                <option value="Historical Non-Fiction">Historical Non-Fiction</option>
+                                <option value="Horror">Horror</option>
+                                <option value="Humor and Comedy">Humor and Comedy</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Non-Fiction">Non-Fiction</option>
+                                <option value="Philosophy">Philosophy</option>
+                                <option value="Poetry">Poetry</option>
+                                <option value="Romance">Romance</option>             
+                                <option value="Science Fiction">Science Fiction</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Suspence">Suspence</option>
+                                <option value="Thriller">Thriller</option>
+                                <option value="Travel">Travel</option>
+                                <option value="Young Adult">Young Adult</option>
                             </select>
                             </div><br/>
                             <div className="modal-footer">

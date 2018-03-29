@@ -2,6 +2,7 @@ const db = require("../models");
 
 // Defining methods for the booksController
 module.exports = {
+
   findAll: function(req, res) {
     db.Book
       .find(req.query)
@@ -35,6 +36,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findByGenre: function(req, res) {
+    console.log("hit")
     console.log({genre: req.params.id});
     db.Book
       .find({genre: req.params.id})
