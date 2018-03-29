@@ -52,7 +52,7 @@ handleInputChange = event => {
     return (
         <div className="modal-body">
                      <Container fluid>
-                         <Jumbotron><h1>Add New Book to My Library</h1></Jumbotron>
+                         <Jumbotron><h2>Add New Book to My Library</h2></Jumbotron>
                          <form>
                              <Input
                                  value={this.state.title}

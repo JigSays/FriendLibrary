@@ -1,0 +1,41 @@
+.jumbotron{
+    background-color: brown;
+}
+
+.jumbotron h2{
+    color: lightgrey;
+}
+
+.Nav{
+    color: grey;
+    height: 40px;
+    text-align: center;
+}
+
+.nav-tabs{
+    color: black;
+    font-size: 20pt;
+}
+
+.active{
+    color: grey;
+}
+
+.dropdown-toggle{
+    color: grey; 
+}
+.nav-link{
+    color: grey;
+}
+.dropdown-header{
+    font-size: 16pt;
+    color: black;
+}
+.dropdown-item{
+    color: grey;
+    /* float: left; */
+    text-align: left;
+}
+.dropdown-menu{
+    width: 170px;
+}

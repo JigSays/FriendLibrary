@@ -34,8 +34,8 @@ export default class Example extends React.Component {
             </DropdownToggle>
             <DropdownMenu>
               <DropdownItem header>Pick a Genre:</DropdownItem>
-              <DropdownItem value="Biography">Biography</DropdownItem>
-              <DropdownItem value="Business">Business</DropdownItem>
+              <DropdownItem value="Biography">Biography</DropdownItem><br/>
+              <DropdownItem value="Business">Business</DropdownItem><br/>
               <DropdownItem value="Childrens">Children's</DropdownItem><br/>
               <DropdownItem value="Cookbook">Cookbook</DropdownItem><br/>
               <DropdownItem value="Crime">Crime</DropdownItem><br/>
