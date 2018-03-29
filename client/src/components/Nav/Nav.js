@@ -34,27 +34,27 @@ export default class Example extends React.Component {
             </DropdownToggle>
             <DropdownMenu>
               <DropdownItem header>Pick a Genre:</DropdownItem>
-              <DropdownItem href="/api/books/genre/Biography">Biography</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Business">Business</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Childrens">Children's</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Cookbook">Cookbook</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Crime">Crime</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Fantasy">Fantasy</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Historical Fiction">Historical Fiction</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Historical Non-Fiction">Historical Non-Fiction</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Horror">Horror</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Humor and Comedy">Humor and Comedy</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Mystery">Mystery</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Non-Fiction">Non-Fiction</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Philosophy">Philosophy</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Poetry">Poetry</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Romance">Romance</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Science Fiction">Science Fiction</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Sports">Sports</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Suspence">Suspence</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Thriller">Thriller</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Travel">Travel</DropdownItem><br/>
-              <DropdownItem href="/api/books/genre/Younge Adult">Young Adult</DropdownItem>
+              <DropdownItem value="Biography">Biography</DropdownItem>
+              <DropdownItem value="Business">Business</DropdownItem>
+              <DropdownItem value="Childrens">Children's</DropdownItem><br/>
+              <DropdownItem value="Cookbook">Cookbook</DropdownItem><br/>
+              <DropdownItem value="Crime">Crime</DropdownItem><br/>
+              <DropdownItem value="Fantasy">Fantasy</DropdownItem><br/>
+              <DropdownItem value="Historical Fiction">Historical Fiction</DropdownItem><br/>
+              <DropdownItem value="Historical Non-Fiction">Historical Non-Fiction</DropdownItem><br/>
+              <DropdownItem value="Horror">Horror</DropdownItem><br/>
+              <DropdownItem value="Humor and Comedy">Humor and Comedy</DropdownItem><br/>
+              <DropdownItem value="Mystery">Mystery</DropdownItem><br/>
+              <DropdownItem value="Non-Fiction">Non-Fiction</DropdownItem><br/>
+              <DropdownItem value="Philosophy">Philosophy</DropdownItem><br/>
+              <DropdownItem value="Poetry">Poetry</DropdownItem><br/>
+              <DropdownItem value="Romance">Romance</DropdownItem><br/>
+              <DropdownItem value="Science Fiction">Science Fiction</DropdownItem><br/>
+              <DropdownItem value="Sports">Sports</DropdownItem><br/>
+              <DropdownItem value="Suspence">Suspence</DropdownItem><br/>
+              <DropdownItem value="Thriller">Thriller</DropdownItem><br/>
+              <DropdownItem value="Travel">Travel</DropdownItem><br/>
+              <DropdownItem value="Younge Adult">Young Adult</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <NavItem>
