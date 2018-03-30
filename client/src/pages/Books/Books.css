@@ -24,8 +24,8 @@
 .dropdown-toggle{
     color: grey; 
 }
-.nav-link{
-    color: grey;
+.nav-link.active{
+    color: brown;
 }
 .dropdown-header{
     font-size: 16pt;
@@ -35,6 +35,12 @@
     color: grey;
     /* float: left; */
     text-align: left;
+}
+.nav-link{
+    color: brown;
+}
+.dropdown-toggle{
+    color: brown;
 }
 .dropdown-menu{
     width: 170px;
