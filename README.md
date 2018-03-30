@@ -4,11 +4,11 @@ Mini-sharing economy site allowing friends to upload book titles they are willin
 
 # Wireframe
 
-<img src="WrieFrame.jpg">
+<img src="WireFrame.jpg">
 
 ## FlowChart
 
-<img src="flowchart.png">
+<img src="flowchar.png">
 
 ## Screenshots
 
