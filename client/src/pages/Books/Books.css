@@ -1,5 +1,5 @@
 .jumbotron{
-    background-color: brown;
+    background-color: 	#800000;
 }
 
 .jumbotron h2{
@@ -13,7 +13,7 @@
 }
 
 .nav-tabs{
-    color: brown;
+    color: 	#800000;
     font-size: 20pt;
 }
 
@@ -22,10 +22,10 @@
 }
 
 .dropdown-toggle{
-    color: brown; 
+    color: 	#800000; 
 }
 .nav-link.active{
-    color: brown;
+    color: 	#800000;
 }
 .dropdown-header{
     font-size: 16pt;
@@ -40,17 +40,23 @@
     color: brown;
 }
 .dropdown-toggle{
-    color: brown;
+    color: 	#800000;
 }
 .dropdown-menu{
     width: 170px;
 }
 li.dropdown.nav-item{
-    color: brown;
+    color: 	#800000;
 }
 .ul.nav.nav-tabs{
-    color: brown;
+    color: 	#800000;
 }
 .nav-tabs{
-    color: brown;
+    color: 	#800000;
+}
+.btn-success{
+    background: lightgrey;
+    border-color: #808080;
+    color: maroon;
+    font-weight: bold;
 }

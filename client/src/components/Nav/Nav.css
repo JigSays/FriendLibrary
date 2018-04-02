@@ -5,7 +5,7 @@
 }
 
 .nav-tabs{
-    color: brown;
+    color: 	#800000;
     font-size: 20pt;
 }
 
@@ -13,18 +13,8 @@
     color: grey;
 }
 
-.dropdown-toggle{
-    color: grey; 
-}
 .nav-link{
-    color: brown;
-}
-.dropdown-header{
-    font-size: 16pt;
-    color: black;
-}
-.dropdown-item{
-    color: grey;
+    color: 	#800000;
 }
 #lang{
     border: 0;
