@@ -5,6 +5,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import BookCard from "../../components/BookCard";
 import NewBook from "../../components/NewBook";
 import Search from "../../components/Search";
+import Nav from "../../components/Nav";
 import "./Books.css";
 
 class Books extends Component {
@@ -34,6 +35,9 @@ class Books extends Component {
       .catch(err => console.log(err));
   };
 
+
+
+
   deleteBook = id => {
     API.deleteBook(id)
       .then(res => this.loadBooks())
@@ -54,6 +58,10 @@ class Books extends Component {
       id: ""
     });
   };
+
+  setGenre = event => {
+    this.setState({genre: event.target.value}, this.search);
+  }
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -80,6 +88,23 @@ class Books extends Component {
   };
 
 
+  search = () => {
+    if (this.state.title) {
+      API.getTitle(this.state.title)
+        .then(res => this.setState({books: res.data}))
+        .catch(err => console.log(err));
+      }else if(this.state.author){
+        API.getAuthor(this.state.author)
+        .then(res => this.setState({books: res.data}))
+        .catch(err => console.log(err));
+      }else if(this.state.genre){
+        API.getGenre(this.state.genre)
+        .then(res => this.setState({books: res.data}))
+        .catch(err => console.log(err));
+    }
+  };
+
+
   searchSubmit = event => {
     event.preventDefault();
     if (this.state.title) {
@@ -101,6 +126,7 @@ class Books extends Component {
   render() {
     return (
       <Container fluid>
+      <Nav genreChange={this.setGenre}/>
         <Row>
           <button onClick={() => this.setState({showModal: !this.state.showModal})}>Add New Book</button>
           {this.state.showModal && <NewBook/>}

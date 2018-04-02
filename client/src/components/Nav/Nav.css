@@ -5,7 +5,7 @@
 }
 
 .nav-tabs{
-    color: black;
+    color: brown;
     font-size: 20pt;
 }
 
@@ -17,7 +17,7 @@
     color: grey; 
 }
 .nav-link{
-    color: grey;
+    color: brown;
 }
 .dropdown-header{
     font-size: 16pt;
@@ -25,4 +25,8 @@
 }
 .dropdown-item{
     color: grey;
+}
+#lang{
+    border: 0;
+    margin-top: 15px;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 import "./Nav.css";
 
 export default class Example extends React.Component {
@@ -28,41 +28,39 @@ export default class Example extends React.Component {
           <NavItem>
             <NavLink href="/" active>All</NavLink>
           </NavItem>
-          <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle nav caret>
-              Genre
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem header>Pick a Genre:</DropdownItem>
-              <DropdownItem value="Biography">Biography</DropdownItem><br/>
-              <DropdownItem value="Business">Business</DropdownItem><br/>
-              <DropdownItem value="Childrens">Children's</DropdownItem><br/>
-              <DropdownItem value="Cookbook">Cookbook</DropdownItem><br/>
-              <DropdownItem value="Crime">Crime</DropdownItem><br/>
-              <DropdownItem value="Fantasy">Fantasy</DropdownItem><br/>
-              <DropdownItem value="Historical Fiction">Historical Fiction</DropdownItem><br/>
-              <DropdownItem value="Historical Non-Fiction">Historical Non-Fiction</DropdownItem><br/>
-              <DropdownItem value="Horror">Horror</DropdownItem><br/>
-              <DropdownItem value="Humor and Comedy">Humor and Comedy</DropdownItem><br/>
-              <DropdownItem value="Mystery">Mystery</DropdownItem><br/>
-              <DropdownItem value="Non-Fiction">Non-Fiction</DropdownItem><br/>
-              <DropdownItem value="Philosophy">Philosophy</DropdownItem><br/>
-              <DropdownItem value="Poetry">Poetry</DropdownItem><br/>
-              <DropdownItem value="Romance">Romance</DropdownItem><br/>
-              <DropdownItem value="Science Fiction">Science Fiction</DropdownItem><br/>
-              <DropdownItem value="Sports">Sports</DropdownItem><br/>
-              <DropdownItem value="Suspence">Suspence</DropdownItem><br/>
-              <DropdownItem value="Thriller">Thriller</DropdownItem><br/>
-              <DropdownItem value="Travel">Travel</DropdownItem><br/>
-              <DropdownItem value="Younge Adult">Young Adult</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+          
           <NavItem>
             <NavLink href="/">Friends</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/new">New</NavLink>
           </NavItem>
+          <NavItem>
+            <select id="lang"onChange={this.props.genreChange} value={this.state.value}>
+                  <option >Genre</option>
+                  <option value="Biography">Biography</option>
+                  <option value="Business">Business</option>
+                  <option value="Childrens">Children's</option>
+                  <option value="Cookbooks">Cookbooks</option>
+                  <option value="Crime">Crime</option>
+                  <option value="Fantasy">Fantasy</option>
+                  <option value="Historical Ficton">Historical Fiction</option>
+                  <option value="Historical Non-Fiction">Historical Non-Fiction</option>
+                  <option value="Horror">Horror</option>
+                  <option value="Humor and Comedy">Humor and Comedy</option>
+                  <option value="Mystery">Mystery</option>
+                  <option value="Non-Fiction">Non-Fiction</option>
+                  <option value="Philosophy">Philosophy</option>
+                  <option value="Poetry">Poetry</option>
+                  <option value="Romance">Romance</option>             
+                  <option value="Science Fiction">Science Fiction</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Suspence">Suspence</option>
+                  <option value="Thriller">Thriller</option>
+                  <option value="Travel">Travel</option>
+                  <option value="Young Adult">Young Adult</option>
+               </select>
+               </NavItem>
         </Nav>
       </div>
     );
