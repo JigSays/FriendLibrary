@@ -13,7 +13,7 @@
 }
 
 .nav-tabs{
-    color: black;
+    color: brown;
     font-size: 20pt;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .dropdown-toggle{
-    color: grey; 
+    color: brown; 
 }
 .nav-link.active{
     color: brown;
@@ -44,4 +44,13 @@
 }
 .dropdown-menu{
     width: 170px;
+}
+li.dropdown.nav-item{
+    color: brown;
+}
+.ul.nav.nav-tabs{
+    color: brown;
+}
+.nav-tabs{
+    color: brown;
 }
