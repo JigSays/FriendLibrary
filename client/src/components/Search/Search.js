@@ -56,7 +56,6 @@ const Search = props =>  {
                             </div><br/>
                             <div className="modal-footer">
                             <FormBtn
-                                //  disabled={!(this.state.author || this.state.title || this.state.genre)}
                                  onClick={props.clickHandler}
                             >Search</FormBtn>
                             </div>

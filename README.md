@@ -4,15 +4,20 @@ Mini-sharing economy site allowing friends to upload book titles they are willin
 
 # Wireframe
 
-<img src="WireFrame.jpg">
+<img src="./photos/WireFrame.jpg" alt="Wireframe">
 
 ## FlowChart
 
-<img src="flowchar.png">
+<img src="./photos/flowchart.png" alt="Flowchart">
 
 ## Screenshots
 
-??Place Holder??
+<img src="./photos/Screenshot aaa.png" alt="Screen shot of initial load">
+<img src="./photos/Screenshot add.png" alt="Screen shot of add a book">
+<img src="./photos/Screenshot search.png" alt="Screen shot of search modal">
+<img src="./photos/Screenshot genre.png" alt="Screen shot of genre dropdown">
+<img src="./photos/Screenshot results1.png" alt="Screen shot of results">
+<img src="./photos/Screenshot results2.png" alt="Screen shot of results">
 
 ## How to Use
 <ul>
