@@ -5,6 +5,10 @@ export default {
   getBooks: function() {
     return axios.get("/api/books");
   },
+  // Gets books added in last 30 days
+  getNew: function() {
+    return axios.get("/api/new");
+  },
   // Gets the book with the given id
   getTitle: function(id) {
     return axios.get("/api/books/title/" + id);
