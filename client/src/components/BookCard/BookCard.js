@@ -2,6 +2,7 @@ import React from "react";
 import "./BookCard.css";
 import DeleteBtn from "../DeleteBtn";
 
+//Provides the layout for individual book layouts coming back from database.
 const BookCard = props => (
   <div className="card" value={props.current._id}>
     <div className="content">

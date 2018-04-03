@@ -8,6 +8,7 @@ import Search from "../../components/Search";
 import Nav from "../../components/Nav";
 import "./Books.css";
 
+//Sets state:
 class Books extends Component {
   state = {
     books: [],
@@ -22,10 +23,13 @@ class Books extends Component {
     id: ""
   };
 
+
+  //once page is loaded, all books currently in library load - can be changed to jut user's books
   componentDidMount() {
     this.loadBooks();
   }
 
+  //function to returns API call to load all books
   loadBooks = () => {
     API.getBooks()
       .then(res =>
@@ -35,15 +39,14 @@ class Books extends Component {
       .catch(err => console.log(err));
   };
 
-
-
-
+//function to delete individual book from a person's library; ideally should only be accessible to owner of the book
   deleteBook = id => {
     API.deleteBook(id)
       .then(res => this.loadBooks())
       .catch(err => console.log(err));
   };
 
+//function to allow for input in new book modal.
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -59,10 +62,12 @@ class Books extends Component {
     });
   };
 
+  //function to allow the genre dropdown in Nav to work and render
   setGenre = event => {
     this.setState({genre: event.target.value}, this.search);
   }
 
+  //function that pushes new book modal information to database
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
@@ -80,6 +85,7 @@ class Books extends Component {
     }
   };
 
+  //function that handles the changes to the author or title fields in the search modal.
   handleSearchChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -87,7 +93,7 @@ class Books extends Component {
     });
   };
 
-
+  //function to determine which API to make based on information being searched in search modal
   search = () => {
     if (this.state.title) {
       API.getTitle(this.state.title)
@@ -104,7 +110,7 @@ class Books extends Component {
     }
   };
 
-
+//function to determine which API to make based on information being searched in search modal
   searchSubmit = event => {
     event.preventDefault();
     if (this.state.title) {

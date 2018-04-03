@@ -12,7 +12,7 @@ Mini-sharing economy site allowing friends to upload book titles they are willin
 
 ## Screenshots
 
-<img src="./photos/Screenshot aaa.png" alt="Screen shot of initial load">
+<img src="./photos/Screenshot all.png" alt="Screen shot of initial load">
 <img src="./photos/Screenshot add.png" alt="Screen shot of add a book">
 <img src="./photos/Screenshot search.png" alt="Screen shot of search modal">
 <img src="./photos/Screenshot genre.png" alt="Screen shot of genre dropdown">
