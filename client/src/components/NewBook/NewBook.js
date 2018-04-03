@@ -4,6 +4,7 @@ import { Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import Jumbotron from "../../components/Jumbotron";
 
+//sets state to allow for input of new book into form
 class NewBook extends Component {
     state = {
       books: [],
@@ -31,6 +32,7 @@ handleInputChange = event => {
     });
   };
 
+  //only allows new book to be submitted to database if and only if both Author & Title are completed
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
@@ -48,6 +50,7 @@ handleInputChange = event => {
     }
   };
 
+  //New book modal HTML
   render() {
     return (
         <div className="modal-body">

@@ -3,6 +3,7 @@ import { Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import Jumbotron from "../../components/Jumbotron";
 
+//Search modal HTML
 const Search = props =>  {
 
     return (
