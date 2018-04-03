@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import "./Nav.css";
+import API from "../../utils/API";
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -18,6 +19,12 @@ export default class Example extends React.Component {
     });
   }
 
+  newClick() {
+    API.getNew()
+    .then(res => this.setState({books: res.data}))
+    .catch(err => console.log(err));
+  }
+
   render() {
     return (
       <div>
@@ -33,7 +40,7 @@ export default class Example extends React.Component {
             <NavLink href="/">Friends</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/new">New</NavLink>
+            <NavLink href="" onClick={this.newClick()} >New</NavLink>
           </NavItem>
           <NavItem>
             <select id="lang"onChange={this.props.genreChange} value={this.state.value}>

@@ -13,7 +13,7 @@ const App = () =>
         <Route exact path="/books/author" component={Books} />
         <Route exact path="/books/title" component={Books} />
         <Route exact path="/books/genre" component={Books} />
-        <Route exact path="/books/new" component={Books} />
+        <Route exact path="/" component={Books} />
         <Route component={NoMatch} />
       </Switch>
     </div>

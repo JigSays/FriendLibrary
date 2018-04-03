@@ -4,15 +4,17 @@ const db = require("../models");
 module.exports = {
 
   findAll: function(req, res) {
-    db.Book
+    db.Book  
       .find(req.query)
-      .sort({ title: -1 })
+      .sort({ title: +1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findNew: function(req, res) {
+    let today = new Date();
+    let prior = new Date(new Date().setDate(today.getDate() - 30));
     db.Book
-      .find(req.query)
+      .find({"date": {"$gte": prior, "$lt": today}})
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
@@ -36,8 +38,6 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findByGenre: function(req, res) {
-    console.log("hit")
-    console.log({genre: req.params.id});
     db.Book
       .find({genre: req.params.id})
       .then(dbModel => res.json(dbModel))
